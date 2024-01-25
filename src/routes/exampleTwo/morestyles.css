@@ -1,0 +1,28 @@
+.extendTestComp2.TestComp {
+	background-color: green;
+}
+.extendTestComp2a.TestComp {
+	font-size: x-large;
+	background-color: red;
+	border: 4px solid black;
+}
+
+.foobar.DataTable {
+	.table { 
+		.table-header {
+			.table-header-cell {
+				background-color: red;
+			}
+		}
+	}
+}
+
+.override.DataTable {
+    .table {
+        .table-header {
+            .table-header-cell {
+                background-color: green;
+            }
+        }
+    }
+}

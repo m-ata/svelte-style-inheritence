@@ -1,0 +1,86 @@
+@mixin toastMessage($backgroundColor) {
+  background: $backgroundColor;
+  img {
+    width: 2em;
+    background: transparent;
+  }
+}
+@mixin label($fontSize, $lineHeight, $letterSpacing: 0.1px, $fontWeight: 600) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+@mixin horizontalLine(
+  $borderColor: $paleGray,
+  $marginTop: 1px,
+  $borderWidth: 1px,
+  $height: 1px
+) {
+  display: block;
+  height: $height;
+  border: 0;
+  border-top: $borderWidth solid $borderColor;
+  margin-top: $marginTop;
+}
+@mixin noData($height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - $height);
+}
+@mixin controlButtons($backgroundColor, $color, $hover) {
+  background-color: $backgroundColor;
+  color: $color;
+  &:hover {
+    background-color: $hover;
+  }
+}
+@mixin closeButton($top) {
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  right: 16px;
+  top: $top;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+@mixin status($paddingTopBottom, $paddingRightLeft) {
+  padding: $paddingTopBottom $paddingRightLeft;
+  border-radius: 15px;
+  color: $lightBluishGray;
+  text-transform: capitalize;
+  border: 2px solid;
+  border-color: $brightBlue;
+  color: $brightBlue;
+
+  &.red {
+    border-color: $brightRed;
+    color: $brightRed;
+  }
+
+  &.green {
+    border-color: $brightGreen;
+    color: $brightGreen;
+  }
+
+  &.yellow {
+    border-color: $brightYellow;
+    color: $brightYellow;
+  }
+}
+@mixin button(
+  $borderRadius,
+  $display,
+  $paddingTopBottom,
+  $paddingRightLeft,
+  $cursor: pointer
+) {
+  cursor: $cursor;
+  border: none;
+  border-radius: $borderRadius;
+  display: $display;
+  padding: $paddingTopBottom, $paddingRightLeft;
+}

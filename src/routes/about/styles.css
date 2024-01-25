@@ -1,0 +1,16 @@
+
+.overrideTestComp {
+	background-color: green;
+	color: saddlebrown;
+	font-size: x-large;
+}
+
+.extendTestComp {
+	border: 4px solid black;
+}
+
+.TestComp {
+	background-color: orange;
+	color: blue;
+	font-size: x-large;
+}

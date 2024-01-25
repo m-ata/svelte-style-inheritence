@@ -1,0 +1,15 @@
+
+.testme {
+	background-color: gray;
+}
+.testme2 {
+	background-color: red;
+}
+
+.testme3 {
+	background-color: var(--test-color, var(--svelte-calendar-test-color));
+}
+
+:root {
+	--svelte-calendar-test-color: blue;
+}
